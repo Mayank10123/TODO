@@ -17,7 +17,10 @@ export default defineConfig({
   server: {
     port: 8080,
     host: true, // Allow external connections
-    allowed: ['todo-g7qe.onrender.com'],
+    hmr: {
+      host: 'todo-g7qe.onrender.com',
+      protocol: 'wss',
+    },
     proxy: {
       // Proxy API requests to local Firebase backend (running on port 3000)
       '/api': {
