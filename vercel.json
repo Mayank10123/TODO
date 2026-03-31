@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "crons": [
+    {
+      "path": "/api/cron/send-notifications",
+      "schedule": "*/5 * * * *"
+    }
+  ],
+  "env": {
+    "CRON_SECRET": "YOUR_CRON_SECRET_HERE"
+  }
+}
